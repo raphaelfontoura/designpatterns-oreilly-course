@@ -20,7 +20,7 @@ public class Printer extends Thread {
     private Random myRandom = new Random();
 
     public Printer() {
-        this.printerQueue = new SimpleFIFOPrinterQueue();
+        this(QueueStrategy.FIFO);
     }
 
     public Printer(QueueStrategy queueStrategy) {
